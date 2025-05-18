@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <title>PhamTuan Store</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: #111;
       color: white;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       padding: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
@@ -28,6 +38,12 @@
       overflow: hidden;
       text-align: center;
       padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
     .card img {
@@ -35,6 +51,11 @@
       height: 160px;
       object-fit: cover;
       border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
     }
 
     .card h3 {
@@ -55,6 +76,12 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #7c3aed;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -67,25 +94,24 @@
       <img src="https://th.bing.com/th/id/OIF.thgopSDw51XRZLxzWRfBZQ?w=196&h=196&c=7&r=0&o=5&cb=iwc2&dpr=1.5&pid=1.7" alt="Áo boy làng">
       <h3>Quần Boy Làng </h3>
       <div class="price">29.000 VNĐ</div>
-      <button class="btn">Đặt hàng </button>
+      <button class="btn">Đặt hàng</button>
     </div>
 
     <!-- MOD 2 -->
     <div class="card">
       <img src="https://i.imgur.com/j4DHgY5.jpg" alt="LSPD Police Mod">
-      <h3>Người yêu Cũ </h3>
-      <div class="price">Vô Giá  VNĐ</div>
+      <h3>Người yêu Cũ</h3>
+      <div class="price">Vô Giá VNĐ</div>
       <button class="btn">Đặt hàng</button>
     </div>
 
     <!-- MOD 3 -->
     <div class="card">
       <img src="https://th.bing.com/th/id/OIP.7zh6PWmPhOqcOtfIOX6zawHaHa?w=187&h=187&c=7&r=0&o=5&cb=iwc2&dpr=1.5&pid=1.7" alt="Áo boy phố">
-      <h3>Áo Boy Phố </h3>
+      <h3>Áo Boy Phố</h3>
       <div class="price">200.000 VNĐ</div>
-      <button class="btn">Đặt hàng </button>
+      <button class="btn">Đặt hàng</button>
     </div>
   </div>
 </body>
 </html>
-
